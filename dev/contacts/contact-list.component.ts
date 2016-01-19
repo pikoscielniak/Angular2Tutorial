@@ -13,7 +13,7 @@ import {CONTACTS} from "./mock-contact";
         {{contact.firstName}} {{contact.lastName}}
     </li>
     </ul>
-    <contact [contact]="selectedContact"></contact>
+    <contact *ngIf="selectedContact !== null" [contact]="selectedContact"></contact>
     `,
     directives: [ContactComponent],
     providers: [ContactService],
@@ -21,7 +21,7 @@ import {CONTACTS} from "./mock-contact";
 })
 export class ContactListComponent implements OnInit {
     public contacts:Contact[];
-    public selectedContact = {};
+    public selectedContact = null;
 
     ngOnInit():any {
         debugger
