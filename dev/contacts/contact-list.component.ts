@@ -10,7 +10,7 @@ import {CONTACTS} from "./mock-contact";
     template: `
     <ul>
     <li [class.clicked]="selectedContact === contact" *ngFor="#contact of contacts" (click)="onSelect(contact)">
-        {{contact.firstName}} {{contact.lastName}}
+        {{contact.firstName}} {{contact.lastName | uppercase}}
     </li>
     </ul>
     <contact *ngIf="selectedContact !== null" [contact]="selectedContact"></contact>
