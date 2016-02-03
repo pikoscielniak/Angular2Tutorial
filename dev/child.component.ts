@@ -8,7 +8,7 @@ import {Output} from "angular2/core";
         <p>Value entered in parent component: {{parentValue}}</p>
         <input type="text" #childInput (keyup)="onChange(childInput.value)">
     `,
-    inputs: ['parentValue']
+    inputs: ['parentValue:passedValue']
     // outputs: ['childChanged'] //to ways to do the same, it's also possible with input
 })
 export class ChildComponent {
